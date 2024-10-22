@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Content01 />
+      <Content02 />
     </div>
   );
 }
