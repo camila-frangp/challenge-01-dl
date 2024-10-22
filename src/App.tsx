@@ -11,9 +11,13 @@ function App() {
   return (
     <div className="challenge">
       <h1 className='challenge_title'>Desafío 01</h1>
+      {/* Exercise 01 */}
       <Content01 />
+      {/* Exercise 02 */}
       <Content02 />
+      {/* Exercise 03 */}
       <Content03 />
+      {/* Exercise 04 */}
       <Content04 />
 
     </div>
