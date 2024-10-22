@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 const Content03 = () => {
     const [quantityDays, setQuantityDays] = useState<number>(0);
@@ -21,10 +21,14 @@ const Content03 = () => {
 
     return(
         <section className='content content__02'>
-            <label>Ingrese la cantidad de días que desee.</label>
-            <input type='number' onChange={(e)=> setQuantityDays(Number(e.target.value)) }/>
-            <button onClick={() => handleResult(quantityDays)}>Calcular</button>
-            <p>{quantityDays > 1 ? `${quantityDays} días`: `${quantityDays} día` } equivale a {year > 1 ? `${year} años`: `${year} año` }, {week > 1 ? `${week} semanas`: `${week} semana` } y {days > 1 ? `${days} días`: `${days} día` }</p>
+            <h3 className='content_title'>Ingrese la cantidad de días que desee.</h3>
+            <div className='content-actions'>
+                <input className='content-actions_input' type='number' onChange={(e)=> setQuantityDays(Number(e.target.value)) }/>
+            </div>
+            <div className='content-actions'>
+                <button className='content-actions_button' onClick={() => handleResult(quantityDays)}>Calcular</button>
+            </div>
+            <div className='content_result'>{quantityDays > 1 ? `${quantityDays} días`: `${quantityDays} día` } equivale a {year > 1 ? `${year} años`: `${year} año` }, {week > 1 ? `${week} semanas`: `${week} semana` } y {days > 1 ? `${days} días`: `${days} día` }</div>
         </section>
     )
 }

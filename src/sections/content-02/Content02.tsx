@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 const Content02 = () => {
     const [value, setValue] = useState<string>('');
@@ -20,12 +20,15 @@ const Content02 = () => {
 
     return(
         <section className='content content__02'>
-            <label>Ingrese los grados en Celsius</label>
-            <input type='number' onChange={(e)=> setValue(e.target.value) }/>
-            <button onClick={() => handleTemperature('kelvin')}>Grados Kelvin</button>
-            <button onClick={() => handleTemperature('fahrenheit')}>Grados Fahrenheit</button>
-            <p>{value}º Celusius quivalen a {resultKelvin ? `${resultKelvin}º Kelvin` : `${resultFahrenheit}º Fahrenheit`} </p>
-
+            <h3 className='content_title'>Ingrese los grados en Celsius</h3>
+            <div className='content-actions'>
+                <input className='content-actions_input' type='number' onChange={(e)=> setValue(e.target.value) }/>
+            </div>
+            <div className='content-actions'>
+                <button className='content-actions_button' onClick={() => handleTemperature('kelvin')}>Grados Kelvin</button>
+                <button className='content-actions_button' onClick={() => handleTemperature('fahrenheit')}>Grados Fahrenheit</button>
+            </div>
+            <div className='content_result'>{value}º Celusius quivalen a {resultKelvin ? `${resultKelvin}º Kelvin` : `${resultFahrenheit}º Fahrenheit`} </div>
         </section>
     )
 }
